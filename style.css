@@ -11,10 +11,10 @@ body {
   color: white;
   overflow-x: hidden;
 
-  /* CLEAN ISLAMIC BACKGROUND */
+  /* 🌙 ISLAMIC BACKGROUND IMAGE */
   background:
-    linear-gradient(rgba(0,20,15,0.8), rgba(0,10,7,0.9)),
-    url("https://images.unsplash.com/photo-1542314831-068cd1dbfeeb");
+    linear-gradient(rgba(0,25,20,0.85), rgba(0,10,8,0.95)),
+    url("https://images.unsplash.com/photo-1564769625905-50e93615e769");
 
   background-size: cover;
   background-position: center;
@@ -24,17 +24,18 @@ body {
 /* HEADER */
 .header {
   text-align: center;
-  padding: 60px 20px;
+  padding: 70px 20px;
 }
 
 .header h1 {
-  font-size: 2.8rem;
+  font-size: 2.9rem;
   color: #ffd700;
   letter-spacing: 1px;
+  text-shadow: 0 0 20px rgba(255,215,0,0.4);
 }
 
 .header p {
-  margin-top: 8px;
+  margin-top: 10px;
   opacity: 0.85;
 }
 
@@ -48,30 +49,31 @@ body {
 
 /* CARD */
 .card {
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(15px);
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(18px);
 
   padding: 30px;
-  border-radius: 20px;
+  border-radius: 22px;
 
   text-align: center;
 
   border: 1px solid rgba(255,255,255,0.1);
 
-  transition: 0.3s;
+  transition: 0.35s;
   cursor: pointer;
 }
 
-/* HOVER EFFECT */
+/* HOVER */
 .card:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 12px 30px rgba(255,215,0,0.25);
+  transform: translateY(-10px) scale(1.04);
+  box-shadow: 0 15px 40px rgba(255,215,0,0.3);
   background: rgba(255,215,0,0.08);
 }
 
+/* CARD TEXT */
 .card h3 {
   color: #ffd700;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
 .card p {
@@ -79,15 +81,74 @@ body {
   opacity: 0.85;
 }
 
-/* TOTAL BOX */
+/* ICON */
+.icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+  color: #ffd700;
+}
+
+/* TOTAL */
 .total-box {
   text-align: center;
-  margin: 40px 0;
+  margin: 50px 0;
 }
 
 .total-box h2 {
-  font-size: 2.3rem;
+  font-size: 2.5rem;
   color: #ffd700;
+  text-shadow: 0 0 15px rgba(255,215,0,0.5);
+}
+
+/* INFO SECTION */
+.info-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.info-section h2 {
+  color: #ffd700;
+  margin-bottom: 15px;
+}
+
+.info-section p {
+  max-width: 700px;
+  margin: auto;
+  opacity: 0.9;
+}
+
+/* LIST */
+.money-list {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.money-list li {
+  margin: 8px 0;
+}
+
+/* NOTE */
+.note {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* IMAGE GRID */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.image-grid img {
+  width: 100%;
+  border-radius: 14px;
+  transition: 0.3s;
+}
+
+.image-grid img:hover {
+  transform: scale(1.05);
 }
 
 /* POPUP */
@@ -105,7 +166,7 @@ body {
   background: rgba(0,0,0,0.6);
 }
 
-/* POPUP CONTENT */
+/* POPUP BOX */
 .popup-content {
   background: rgba(255,255,255,0.1);
   backdrop-filter: blur(20px);
@@ -158,13 +219,22 @@ button {
 
 button:hover {
   transform: scale(1.05);
-  box-shadow: 0 5px 20px rgba(255,215,0,0.4);
+  box-shadow: 0 5px 25px rgba(255,215,0,0.5);
 }
 
 /* CANCEL */
 .cancel {
   background: crimson;
   color: white;
+}
+
+/* SUCCESS */
+.success-box h2 {
+  color: lightgreen;
+}
+
+.success-box p {
+  margin-top: 10px;
 }
 
 /* ANIMATION */
@@ -184,20 +254,8 @@ button:hover {
   .header h1 {
     font-size: 2.2rem;
   }
-}
 
-/* ICON */
-.icon {
-  font-size: 30px;
-  margin-bottom: 10px;
-  color: gold;
-}
-
-/* SUCCESS POPUP */
-.success-box h2 {
-  color: lightgreen;
-}
-
-.success-box p {
-  margin-top: 10px;
+  .grid {
+    padding: 10px;
+  }
 }
