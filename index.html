@@ -6,14 +6,16 @@
 
 <title>Faizane Madina</title>
 
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <!-- ICONS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+<!-- FIREBASE -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<!-- RAZORPAY -->
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
 <link rel="stylesheet" href="style.css">
@@ -21,11 +23,13 @@
 
 <body>
 
+<!-- HEADER -->
 <header class="header">
   <h1>🕌 Faizane Madina</h1>
   <p>Give Sadaqah • Earn Rewards</p>
 </header>
 
+<!-- DONATION CARDS -->
 <section class="grid">
 
   <div class="card" onclick="openPopup('Sadqa')">
@@ -66,10 +70,61 @@
 
 </section>
 
+<!-- TOTAL -->
 <div class="total-box">
   <h2 id="total">₹0</h2>
   <p>Total Donations</p>
 </div>
+
+<!-- ABOUT -->
+<section class="info-section">
+  <h2>🕌 About Us</h2>
+  <p>
+    Faizane Madina is inspired by the welfare activities of Dawate Islami India.
+    Our mission is to help the needy through Sadqa, food distribution, water projects,
+    Quran distribution, and medical support.
+  </p>
+  <p>
+    Dawate Islami is a global Islamic organization working for education, welfare,
+    and spreading knowledge of Islam.
+  </p>
+</section>
+
+<!-- MONEY USAGE -->
+<section class="info-section">
+  <h2>💰 Where Your Money Goes</h2>
+
+  <ul class="money-list">
+    <li>🍛 Food for poor & needy</li>
+    <li>📖 Quran distribution</li>
+    <li>💧 Water projects</li>
+    <li>🏥 Medical help</li>
+    <li>🤲 Help for needy</li>
+  </ul>
+
+  <p class="note">100% donations used for charity</p>
+</section>
+
+<!-- PROOF -->
+<section class="info-section">
+  <h2>📸 Our Work</h2>
+
+  <div class="image-grid">
+    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf">
+    <img src="https://images.unsplash.com/photo-1593113598332-cd59a93c6138">
+    <img src="https://images.unsplash.com/photo-1576765607924-b9e33a41b6e9">
+  </div>
+
+  <p>Helping people through donations and welfare work.</p>
+</section>
+
+<!-- CONTACT -->
+<section class="info-section">
+  <h2>📞 Contact Us</h2>
+  <p>Email: faizane@madina.org</p>
+  <p>Phone: +91 98765 43210</p>
+  <p>Location: India</p>
+</section>
 
 <!-- DONATE POPUP -->
 <div id="popup" class="popup">
@@ -90,7 +145,8 @@
   </div>
 </div>
 
-<!-- ✅ ONLY THIS SCRIPT -->
+<!-- MAIN SCRIPT -->
 <script src="app.js"></script>
+
 </body>
 </html>
