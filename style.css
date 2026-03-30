@@ -8,13 +8,11 @@
 /* BODY */
 body {
   font-family: 'Poppins', sans-serif;
-  color: white;
+  color: #ffffff;
   overflow-x: hidden;
 
-  /* 🌙 ISLAMIC BACKGROUND IMAGE */
-  background:
-    linear-gradient(rgba(0,25,20,0.85), rgba(0,10,8,0.95)),
-    url("https://images.unsplash.com/photo-1564769625905-50e93615e769");
+  background: linear-gradient(rgba(0,20,15,0.85), rgba(0,10,7,0.9)),
+  url("https://images.unsplash.com/photo-1564769625905-50e93615e769");
 
   background-size: cover;
   background-position: center;
@@ -24,56 +22,58 @@ body {
 /* HEADER */
 .header {
   text-align: center;
-  padding: 70px 20px;
+  padding: 50px 20px;
 }
 
 .header h1 {
-  font-size: 2.9rem;
+  font-size: 2.6rem;
   color: #ffd700;
-  letter-spacing: 1px;
-  text-shadow: 0 0 20px rgba(255,215,0,0.4);
 }
 
 .header p {
-  margin-top: 10px;
+  margin-top: 8px;
   opacity: 0.85;
 }
 
 /* GRID */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
   padding: 20px;
 }
 
 /* CARD */
 .card {
-  background: rgba(255,255,255,0.07);
-  backdrop-filter: blur(18px);
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
 
-  padding: 30px;
-  border-radius: 22px;
+  padding: 25px;
+  border-radius: 18px;
 
   text-align: center;
+  cursor: pointer;
 
   border: 1px solid rgba(255,255,255,0.1);
-
-  transition: 0.35s;
-  cursor: pointer;
+  transition: 0.3s;
 }
 
-/* HOVER */
 .card:hover {
-  transform: translateY(-10px) scale(1.04);
-  box-shadow: 0 15px 40px rgba(255,215,0,0.3);
-  background: rgba(255,215,0,0.08);
+  transform: translateY(-6px);
+  background: rgba(255,215,0,0.1);
 }
 
-/* CARD TEXT */
+/* ICON */
+.icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #ffd700;
+}
+
+/* TEXT */
 .card h3 {
   color: #ffd700;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 }
 
 .card p {
@@ -81,38 +81,30 @@ body {
   opacity: 0.85;
 }
 
-/* ICON */
-.icon {
-  font-size: 32px;
-  margin-bottom: 12px;
-  color: #ffd700;
-}
-
 /* TOTAL */
 .total-box {
   text-align: center;
-  margin: 50px 0;
+  margin: 30px 0;
 }
 
 .total-box h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #ffd700;
-  text-shadow: 0 0 15px rgba(255,215,0,0.5);
 }
 
 /* INFO SECTION */
 .info-section {
-  padding: 50px 20px;
+  padding: 40px 20px;
   text-align: center;
 }
 
 .info-section h2 {
   color: #ffd700;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .info-section p {
-  max-width: 700px;
+  max-width: 600px;
   margin: auto;
   opacity: 0.9;
 }
@@ -124,31 +116,20 @@ body {
 }
 
 .money-list li {
-  margin: 8px 0;
-}
-
-/* NOTE */
-.note {
-  margin-top: 10px;
-  font-weight: bold;
+  margin: 6px 0;
 }
 
 /* IMAGE GRID */
 .image-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-  gap: 15px;
-  margin-top: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 10px;
+  margin-top: 15px;
 }
 
 .image-grid img {
   width: 100%;
-  border-radius: 14px;
-  transition: 0.3s;
-}
-
-.image-grid img:hover {
-  transform: scale(1.05);
+  border-radius: 10px;
 }
 
 /* POPUP */
@@ -169,57 +150,46 @@ body {
 /* POPUP BOX */
 .popup-content {
   background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(15px);
 
-  padding: 30px;
-  border-radius: 25px;
+  padding: 25px;
+  border-radius: 20px;
 
   width: 90%;
-  max-width: 360px;
-
+  max-width: 320px;
   text-align: center;
-
-  animation: popupFade 0.3s ease;
 }
 
 /* INPUT */
 input {
   width: 100%;
-  padding: 12px;
-  margin-top: 15px;
+  padding: 10px;
+  margin-top: 10px;
 
-  border-radius: 12px;
+  border-radius: 10px;
   border: none;
 
   background: rgba(255,255,255,0.15);
   color: white;
 }
 
-input::placeholder {
-  color: rgba(255,255,255,0.7);
-}
-
 /* BUTTON */
 button {
   width: 100%;
-  padding: 12px;
-  margin-top: 15px;
+  padding: 10px;
+  margin-top: 10px;
 
-  border-radius: 25px;
+  border-radius: 20px;
   border: none;
 
-  font-weight: bold;
-
-  background: linear-gradient(45deg,#ffd700,#ffcc00);
+  background: #ffd700;
   color: black;
 
   cursor: pointer;
-  transition: 0.3s;
 }
 
 button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 5px 25px rgba(255,215,0,0.5);
+  background: #ffcc00;
 }
 
 /* CANCEL */
@@ -233,29 +203,9 @@ button:hover {
   color: lightgreen;
 }
 
-.success-box p {
-  margin-top: 10px;
-}
-
-/* ANIMATION */
-@keyframes popupFade {
-  from {
-    opacity: 0;
-    transform: scale(0.85);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
 /* RESPONSIVE */
 @media (max-width: 600px) {
   .header h1 {
-    font-size: 2.2rem;
-  }
-
-  .grid {
-    padding: 10px;
+    font-size: 2rem;
   }
 }
