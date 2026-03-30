@@ -1,0 +1,203 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  overflow-x: hidden;
+
+  /* CLEAN ISLAMIC BACKGROUND */
+  background:
+    linear-gradient(rgba(0,20,15,0.8), rgba(0,10,7,0.9)),
+    url("https://images.unsplash.com/photo-1542314831-068cd1dbfeeb");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.header h1 {
+  font-size: 2.8rem;
+  color: #ffd700;
+  letter-spacing: 1px;
+}
+
+.header p {
+  margin-top: 8px;
+  opacity: 0.85;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  gap: 25px;
+  padding: 20px;
+}
+
+/* CARD */
+.card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(15px);
+
+  padding: 30px;
+  border-radius: 20px;
+
+  text-align: center;
+
+  border: 1px solid rgba(255,255,255,0.1);
+
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* HOVER EFFECT */
+.card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(255,215,0,0.25);
+  background: rgba(255,215,0,0.08);
+}
+
+.card h3 {
+  color: #ffd700;
+  margin-bottom: 5px;
+}
+
+.card p {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+/* TOTAL BOX */
+.total-box {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.total-box h2 {
+  font-size: 2.3rem;
+  color: #ffd700;
+}
+
+/* POPUP */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(0,0,0,0.6);
+}
+
+/* POPUP CONTENT */
+.popup-content {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(20px);
+
+  padding: 30px;
+  border-radius: 25px;
+
+  width: 90%;
+  max-width: 360px;
+
+  text-align: center;
+
+  animation: popupFade 0.3s ease;
+}
+
+/* INPUT */
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+
+  border-radius: 12px;
+  border: none;
+
+  background: rgba(255,255,255,0.15);
+  color: white;
+}
+
+input::placeholder {
+  color: rgba(255,255,255,0.7);
+}
+
+/* BUTTON */
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+
+  border-radius: 25px;
+  border: none;
+
+  font-weight: bold;
+
+  background: linear-gradient(45deg,#ffd700,#ffcc00);
+  color: black;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 20px rgba(255,215,0,0.4);
+}
+
+/* CANCEL */
+.cancel {
+  background: crimson;
+  color: white;
+}
+
+/* ANIMATION */
+@keyframes popupFade {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 2.2rem;
+  }
+}
+
+/* ICON */
+.icon {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: gold;
+}
+
+/* SUCCESS POPUP */
+.success-box h2 {
+  color: lightgreen;
+}
+
+.success-box p {
+  margin-top: 10px;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Faizane Madina</title>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<!-- ICONS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+  <h1>🕌 Faizane Madina</h1>
+  <p>Give Sadaqah • Earn Rewards</p>
+</header>
+
+<section class="grid">
+
+  <div class="card" onclick="openPopup('Sadqa')">
+    <i class="fas fa-hand-holding-heart icon"></i>
+    <h3>Sadqa</h3>
+    <p>General charity</p>
+  </div>
+
+  <div class="card" onclick="openPopup('Quran')">
+    <i class="fas fa-book-quran icon"></i>
+    <h3>Quran</h3>
+    <p>Distribute Quran</p>
+  </div>
+
+  <div class="card" onclick="openPopup('Food')">
+    <i class="fas fa-bowl-food icon"></i>
+    <h3>Food</h3>
+    <p>Feed needy</p>
+  </div>
+
+  <div class="card" onclick="openPopup('Water')">
+    <i class="fas fa-droplet icon"></i>
+    <h3>Water</h3>
+    <p>Sadaqah Jariyah</p>
+  </div>
+
+  <div class="card" onclick="openPopup('Beggars Help')">
+    <i class="fas fa-hands-helping icon"></i>
+    <h3>Beggars</h3>
+    <p>Help street people</p>
+  </div>
+
+  <div class="card" onclick="openPopup('Medical')">
+    <i class="fas fa-hospital icon"></i>
+    <h3>Medical</h3>
+    <p>Support treatment</p>
+  </div>
+
+</section>
+
+<div class="total-box">
+  <h2 id="total">₹0</h2>
+  <p>Total Donations</p>
+</div>
+
+<!-- DONATE POPUP -->
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <h2 id="popupTitle"></h2>
+    <input type="number" id="amount" placeholder="Enter Amount ₹">
+    <button onclick="payNow()">Donate Now</button>
+    <button class="cancel" onclick="closePopup()">Cancel</button>
+  </div>
+</div>
+
+<!-- SUCCESS POPUP -->
+<div id="successPopup" class="popup">
+  <div class="popup-content success-box">
+    <h2>✅ Donation Successful</h2>
+    <p id="successText"></p>
+    <button onclick="closeSuccess()">Close</button>
+  </div>
+</div>
+
+<!-- ✅ ONLY THIS SCRIPT -->
+<script src="app.js"></script>
+</body>
+</html>
